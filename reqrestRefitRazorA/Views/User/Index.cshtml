@@ -1,0 +1,54 @@
+﻿
+@model IEnumerable<Data>
+
+<div class="row">
+    <div class="col-md-8 offset-md2">
+        <table class="table">
+            <thead>
+                <tr class="text-center">
+                    <th>id</th>
+                    <th>Avatar</th>
+                    <th>Correo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                    @foreach (var item in Model)
+
+                    {
+                        <tr>
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.id)
+                            </td>
+                            <td>
+                                <img class="rounded-circle" src="@item.avatar" style="max-width:150px" />
+                            </td>
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.email)
+                            </td>
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.first_name)
+                            </td>
+                            <td class="align-middle">
+                                @Html.DisplayFor(modelItem => item.last_name)
+                            </td>
+                            <td class="align-middle">
+                                <a class="btn btn-outline-primary" asp-action="Details" asp-route-id="@item.id"><i class="bi bi-pencil-square"></i>Editar </a> |
+                                <a class="btn btn-danger text-white" asp-action="Delete" asp-route-id="@item.id"><i class="bi bi-trash"></i>Eliminar </a>
+                            </td>
+                        </tr>
+                    }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="position: fixed; right: 25px; bottom: 25px;" class="text-white">
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Agregar
+    </a>
+</div>

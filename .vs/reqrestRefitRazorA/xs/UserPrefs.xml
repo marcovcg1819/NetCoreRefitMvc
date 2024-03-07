@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{421399CE-D62D-464B-A781-7922F10AE547}|http">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.reqrestRefitRazorA PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="reqrestRefitRazorA/Program.cs">
+    <Files>
+      <File FileName="reqrestRefitRazorA/Views/User/Delete.cshtml" Line="60" Column="94" />
+      <File FileName="reqrestRefitRazorA/Controllers/UserController.cs" Line="107" Column="38" />
+      <File FileName="reqrestRefitRazorA/Models/ResponseUserSingle.cs" Line="7" Column="40" />
+      <File FileName="reqrestRefitRazorA/Models/Data.cs" Line="18" Column="32" />
+      <File FileName="reqrestRefitRazorA/Models/Responsea.cs" Line="1" Column="1" />
+      <File FileName="reqrestRefitRazorA/Models/Usera.cs" Line="9" Column="9" />
+      <File FileName="reqrestRefitRazorA/Program.cs" Line="9" Column="99" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="reqrestRefitRazorA" expanded="True">
+            <Node name="reqrestRefitRazorA" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

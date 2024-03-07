@@ -1,0 +1,72 @@
+﻿@model UserUpdate
+
+@{
+    ViewData["Title"] = "Actualizar usuario";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Actualizar Usuario</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Details">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="col-md-12 alert alert-danger">
+                            <span>@TempData["Error"] </span>
+                        </div>
+                    }
+                    @if (TempData["Ok"] != null)
+                    {
+                        <div class="col-md-12 alert alert-success">
+                            <span>@TempData["Ok"] </span>
+                        </div>
+                    }
+                    @if (TempData["data"] != null)
+                    {
+                        <div class="col-md-12 alert alert-success">
+                            <span>@TempData["data"] </span>
+                        </div>
+                    }
+
+                    <div class="form-group">
+                        <label asp-for="id" class="control-label"></label>
+                        <input asp-for="id" class="form-control" readonly/>
+                        <span asp-validation-for="id" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="name" class="control-label"></label>
+                        <input asp-for="name" class="form-control" />
+                        <span asp-validation-for="name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="job" class="control-label"></label>
+                        <input asp-for="job" class="form-control" />
+                        <span asp-validation-for="job" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Motrar todos</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>$(document).ready(function () {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $("#ProfilePictureURL").val();
+        })
+
+        $("#ProfilePictureURL").on("change", function () {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $(this).val();
+        })</script>
+}
